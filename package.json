@@ -1,0 +1,18 @@
+{
+  "name": "bitfinex-terminal-key-encoding",
+  "version": "1.0.0",
+  "description": "Bitfinex Terminal Key Encodings",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitfinexcom/bitfinex-terminal-key-encoding.git"
+  },
+  "keywords": [
+    "dazaar"
+  ],
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "Apache-2.0"
+}
