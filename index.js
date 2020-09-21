@@ -38,15 +38,17 @@ const keyEncoding = {
 
     return Buffer.from(range.candle
       ? 'c!' + (times[range.candle] || range.candle) + '!' + toMS(range.timestamp || 0)
-      : 't!' + toMS(range.timestamp || 0))
+      : 't!' + toMS(range.timestamp || 0) + (range.id ? '!' + range.id : ''))
   },
   decode (bytes) {
     const key = bytes.toString()
 
     if (key[0] === 't') {
+      const parts = key.split('!')
       return {
         candle: null,
-        timestamp: new Date(Number(key.slice(2)))
+        timestamp: new Date(Number(parts[1])),
+        id: parts[2] || null
       }
     }
 
