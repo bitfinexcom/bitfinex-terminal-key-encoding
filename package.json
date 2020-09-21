@@ -1,6 +1,6 @@
 {
   "name": "bitfinex-terminal-key-encoding",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bitfinex Terminal Key Encodings",
   "main": "index.js",
   "scripts": {
