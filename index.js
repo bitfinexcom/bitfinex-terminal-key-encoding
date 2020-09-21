@@ -38,7 +38,7 @@ const keyEncoding = {
 
     return Buffer.from(range.candle
       ? 'c!' + (times[range.candle] || range.candle) + '!' + toMS(range.timestamp || 0)
-      : 't!' + toMS(range.timestamp || 0) + '!' + range.id)
+      : 't!' + toMS(range.timestamp || 0) + (range.id ? '!' + range.id : ''))
   },
   decode (bytes) {
     const key = bytes.toString()
